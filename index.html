@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love Maahi ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #ff4d6d;
+            --secondary: #ff758f;
+            --accent: #ff1e56;
+            --light: #2b2b2b;
+            --dark: #1a1a1a;
+            --text-light: #f5f5f5;
+            --text-dark: #cccccc;
+            --gradient-bg: linear-gradient(135deg, #1a1a1a, #2b2b2b, #1a1a1a);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--gradient-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+        
+        .heart-cursor {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23ff4757'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>"), auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background-size: 400% 400%;
+            animation: gradient-animation 10s ease infinite;
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+            color: var(--text-light);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 2;
+            color: var(--secondary);
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23ffffff' opacity='0.7'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>") no-repeat;
+            background-size: contain;
+            animation: float 6s ease-in-out infinite, rotate 6s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .love-message {
+            text-align: center;
+            font-size: 2rem;
+            margin: 2rem 0;
+            font-family: 'Dancing Script', cursive;
+            color: var(--accent);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Explicitly set 2 columns */
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        /* Updated video card styles for natural embedding */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            background: #f5f5f5;
+            aspect-ratio: 9 / 16; /* Ensure proper aspect ratio */
+        }
+        
+        .video-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+            background: transparent;
+        }
+        
+        .interactive-element {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .love-button {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text-light);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.5);
+            font-family: 'Dancing Script', cursive;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .love-button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 30px rgba(255, 77, 109, 0.7);
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+        }
+        
+        .love-button:active {
+            transform: scale(0.95);
+        }
+        
+        .love-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+        
+        .love-button:hover::after {
+            left: 100%;
+        }
+        
+        .memory-box {
+            background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+            padding: 2rem;
+            border-radius: 15px;
+            color: var(--text-light);
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .memory-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/always-grey.png');
+            opacity: 0.1;
+        }
+        
+        .memory-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+        
+        /* Updated media grid styles */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 2rem;
+        }
+        
+        .media-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            background: var(--light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .media-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+        }
+        
+        .media-item img,
+        .media-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            aspect-ratio: auto;
+            max-height: 300px;
+            margin: 0 auto;
+        }
+        
+        .media-item video {
+            background-color: transparent;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            box-shadow: 0 0 20px rgba(255, 77, 109, 0.5);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255, 77, 109, 0.5); }
+            100% { box-shadow: 0 0 30px rgba(255, 77, 109, 0.8); }
+        }
+        
+        .footer-heart {
+            color: var(--text-light);
+            font-size: 2rem;
+            animation: heartbeat-enhanced 1.5s infinite ease-in-out;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat-enhanced {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.3); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.3); }
+            80% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr; /* Single column for smaller screens */
+            }
+            
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Special animation elements */
+        .floating-text {
+            position: fixed;
+            font-family: 'Dancing Script', cursive;
+            color: var(--accent);
+            font-size: 2rem;
+            pointer-events: none;
+            z-index: 1000;
+            animation: popup-from-corner 4s ease-out forwards, bounce 2s infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes popup-from-corner {
+            0% {
+                transform: translate(-100%, -100%) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(10%, 10%) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent);
+            opacity: 0;
+            z-index: 999;
+            animation: confetti-fall-enhanced 3s linear forwards;
+        }
+        
+        @keyframes confetti-fall-enhanced {
+            0% {
+                transform: translate(-50vw, -50vh) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(0, 50vh) rotate(180deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(50vw, 100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="heart-cursor">
+    <header>
+        <div class="floating-hearts" id="floatingHearts"></div>
+        <h1>For My Beautiful Maahi</h1>
+        <p class="subtitle">Every moment with you is magical</p>
+    </header>
+    
+    <div class="container">
+        <section>
+            <h2>My Love For You</h2>
+            <div class="love-message" id="loveMessage">I Love You Maahi ❤️</div>
+            
+            <div class="interactive-element">
+                <button class="love-button" id="loveButton">Click for More Love!</button>
+            </div>
+            
+            <div class="memory-box">
+                <p class="memory-text">From the moment I first saw you, I knew you were special. Even though we haven't met yet, I dream about the day we'll share ice cream together, watch movies side by side, and create beautiful memories.</p>
+                <p class="memory-text">Your smile in pictures brightens my darkest days, and just the thought of you gives me strength I never knew I had. I can't wait for the moment when we finally meet and I can show you how much you mean to me.</p>
+                <p class="memory-text">This website is just a small token of my endless love for you, my beautiful Maahi. You're already my everything, even before our first hello.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>My Lovely Maahi</h2>
+            <div class="gallery" id="videoGallery">
+                <!-- Video containers will be added here by JavaScript -->
+            </div>
+        </section>
+        
+        <section>
+            <h2>My Doll</h2>
+            <div class="media-grid" id="mediaGrid">
+                <!-- Media items (both photos and videos) will be added here by JavaScript -->
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Made with <span class="footer-heart">❤️</span> for Maahi</p>
+        <p>Forever yours</p>
+    </footer>
+    
+    <script>
+        // Create floating hearts
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            const heartCount = 20;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                
+                // Random position
+                const left = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = 3 + Math.random() * 3;
+                const size = 15 + Math.random() * 10;
+                
+                heart.style.left = `${left}%`;
+                heart.style.bottom = `-20px`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.width = `${size}px`;
+                heart.style.height = `${size}px`;
+                
+                container.appendChild(heart);
+            }
+        }
+        
+        // Create video gallery with natural embedding
+        function createVideoGallery() {
+            const gallery = document.getElementById('videoGallery');
+            
+            // Updated video data - added one more video
+            const videos = [
+                {
+                    src: "https://drive.google.com/file/d/17Mgoe2assrokf6Zs5-8jEpcXu4tj5_P_/preview",
+                    title: ""
+                },
+                {
+                    src: "https://drive.google.com/file/d/1lSAw75V3g1HACwxx2nDIRw4LS7b-6k0Z/preview",
+                    title: ""
+                },
+                {
+                    src: "https://drive.google.com/file/d/1JsDmGUYdSkw3njIM85mtN9_tJFqxf1zH/preview",
+                    title: ""
+                },
+                {
+                    src: "https://drive.google.com/file/d/1PMcj250bXKHrHqwNVHXevoQJV5arW1FV/preview", // New video
+                    title: ""
+                }
+            ];
+            
+            videos.forEach(video => {
+                const videoContainer = document.createElement('div');
+                videoContainer.classList.add('video-container');
+                
+                videoContainer.innerHTML = `
+                    <iframe 
+                        src="${video.src}" 
+                        title="${video.title}"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                `;
+                
+                gallery.appendChild(videoContainer);
+            });
+        }
+        
+        // Create media grid with both photos and videos
+        function createMediaGrid() {
+            const grid = document.getElementById('mediaGrid');
+            
+            // Updated media data with direct image URLs or correct Google Drive links
+            const mediaItems = [
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=10Wp_3wtaASl5b9r8AMCDi4Cfzd-xKug5',
+                    alt: 'Photo 1'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=13ZXncMWXCLVMH0cd968eBq--NWteacm0',
+                    alt: 'Photo 2'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1Cy73Xo2FyHh94aoOEfu5PqhbgOKM8vZw',
+                    alt: 'Photo 3'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1FCSijC4kKb3N-VejvMjCQlB3PZZlFeYz',
+                    alt: 'Photo 4'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1GShvG1V_48tCMa1PGQ_wMUJfhUSvWCP8',
+                    alt: 'Photo 5'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1IKu6glwEf18GW3vTxRtjI6KNfahIFFhk',
+                    alt: 'Photo 6'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1SKmH7Y_2Xgd91Qf6Ho0hZtsWIMo_a2Sp',
+                    alt: 'Photo 7'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1U7ggRr4kWP7mWr0NVbYQ6DqxkAg7-TBG',
+                    alt: 'Photo 8'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1WYJx0Q__KzIIsCJSg5YH32epo3NDh5uq',
+                    alt: 'Photo 9'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1XeC8vPC4RSOL1yZQErdvuvu1S0NeLJn7',
+                    alt: 'Photo 10'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1Ymu028oVqmxZoZLSyrXfkLrSsT09iDYH',
+                    alt: 'Photo 11'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1d_E8bNDDrmpWZddTZbbWyT1EOvIIZTrt',
+                    alt: 'Photo 12'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1hR6HTyPouowPFBxrPD1XFBbO5kmeoO48',
+                    alt: 'Photo 13'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1krJggdakuV3tMZuGLNTQhbNVPvEchsFm',
+                    alt: 'Photo 14'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1p5qkhk2bjM-9WN-6nBnz8RE8KqDQxQVH',
+                    alt: 'Photo 15'
+                },
+                {
+                    type: 'image',
+                    src: 'https://drive.google.com/thumbnail?id=1r1pVgcYHiO2eUQMDGEEoEKU8A5nr0enU',
+                    alt: 'Photo 16'
+                },
+             
+            ];
+            
+            mediaItems.forEach(media => {
+                const mediaItem = document.createElement('div');
+                mediaItem.classList.add('media-item');
+                
+                mediaItem.innerHTML = `
+                    <img 
+                        src="${media.src}" 
+                        alt="${media.alt}"
+                        loading="lazy"
+                        onerror="this.src='placeholder-image.jpg'; this.alt='Image not available'"
+                    >
+                `;
+                
+                grid.appendChild(mediaItem);
+            });
+        }
+
+        // Open media in full view
+        function openFullMedia(media) {
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.9)';
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.zIndex = '10000';
+            overlay.style.cursor = 'pointer';
+            
+            let mediaElement;
+            if (media.type === 'image') {
+                mediaElement = document.createElement('img');
+                mediaElement.src = media.src;
+                mediaElement.alt = media.alt;
+                mediaElement.style.maxHeight = '90vh';
+                mediaElement.style.maxWidth = '90vw';
+                mediaElement.style.objectFit = 'contain';
+            } else {
+                mediaElement = document.createElement('video');
+                mediaElement.src = media.src;
+                mediaElement.controls = true;
+                mediaElement.autoplay = true;
+                mediaElement.style.maxHeight = '90vh';
+                mediaElement.style.maxWidth = '90vw';
+            }
+            
+            overlay.appendChild(mediaElement);
+            
+            // Close on click
+            overlay.addEventListener('click', function() {
+                document.body.removeChild(overlay);
+            });
+            
+            document.body.appendChild(overlay);
+        }
+        
+        // Love button effects
+        function setupLoveButton() {
+            const button = document.getElementById('loveButton');
+            const loveMessage = document.getElementById('loveMessage');
+            
+            const messages = [
+                "I Love You Maahi ❤️",
+                "You're My Everything 💖",
+                "My Heart Belongs To You 🥰",
+                "Forever Yours 💕",
+                "You Make Me So Happy 😊",
+                "I'm So Lucky To Have You 🌟",
+                "My Beautiful Maahi 💐"
+            ];
+            
+            button.addEventListener('click', function() {
+                // Change message
+                const randomIndex = Math.floor(Math.random() * messages.length);
+                loveMessage.textContent = messages[randomIndex];
+                
+                // Create floating text
+                createFloatingText(messages[randomIndex]);
+                
+                // Create confetti
+                createConfetti();
+            });
+        }
+        
+        // Enhanced floating text animation
+        function createFloatingText(text) {
+            const floatingText = document.createElement('div');
+            floatingText.classList.add('floating-text');
+            floatingText.textContent = text;
+
+            // Random corner position
+            const corner = Math.floor(Math.random() * 4);
+            switch (corner) {
+                case 0: // Top-left
+                    floatingText.style.top = '10px';
+                    floatingText.style.left = '10px';
+                    break;
+                case 1: // Top-right
+                    floatingText.style.top = '10px';
+                    floatingText.style.right = '10px';
+                    break;
+                case 2: // Bottom-left
+                    floatingText.style.bottom = '10px';
+                    floatingText.style.left = '10px';
+                    break;
+                case 3: // Bottom-right
+                    floatingText.style.bottom = '10px';
+                    floatingText.style.right = '10px';
+                    break;
+            }
+
+            document.body.appendChild(floatingText);
+
+            // Remove after animation
+            setTimeout(() => {
+                floatingText.remove();
+            }, 4000);
+        }
+
+        // Enhanced confetti effect
+        function createConfetti() {
+            const colors = ['#ff4d6d', '#ff758f', '#ff1e56', '#ffa502', '#ff7f50', '#ff6348'];
+
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+
+                // Random properties
+                const size = 5 + Math.random() * 10;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const left = Math.random() * 100;
+                const animationDuration = 2 + Math.random() * 2;
+                const delay = Math.random() * 3;
+
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.left = `${left}%`;
+                confetti.style.animationDuration = `${animationDuration}s`;
+                confetti.style.animationDelay = `${delay}s`;
+
+                document.body.appendChild(confetti);
+
+                // Remove after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, animationDuration * 1000);
+            }
+        }
+        
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingHearts();
+            createVideoGallery();
+            createMediaGrid();
+            setupLoveButton();
+            
+            // Change love message periodically
+            setInterval(() => {
+                const button = document.getElementById('loveButton');
+                button.click();
+            }, 8000);
+        });
+    </script>
+</body>
+</html>
